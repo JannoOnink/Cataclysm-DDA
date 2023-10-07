@@ -2301,6 +2301,30 @@
   },
   {
     "type": "construction",
+    "id": "constr_chair_nail",
+    "group": "build_chair_nail",
+    "category": "FURN",
+    "time": "15 s",
+    "components": [ [ [ "chair_wood_nail", 1 ] ] ],
+    "pre_special": "check_empty",
+    "post_terrain": "f_chair",
+    "activity_level": "LIGHT_EXERCISE",
+    "required_skills": [ [ "fabrication", 0 ] ]
+  },
+  {
+    "type": "construction",
+    "id": "constr_chair_join",
+    "group": "build_chair_join",
+    "category": "FURN",
+    "time": "15 s",
+    "components": [ [ [ "chair_wood_join", 1 ] ] ],
+    "pre_special": "check_empty",
+    "post_terrain": "f_chair",
+    "activity_level": "LIGHT_EXERCISE",
+    "required_skills": [ [ "fabrication", 0 ] ]
+  },
+  {
+    "type": "construction",
     "id": "constr_stool",
     "group": "build_stool",
     "category": "FURN",
