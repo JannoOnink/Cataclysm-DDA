@@ -1530,7 +1530,7 @@ void options_manager::add_options_general()
     [&]( const std::string & page_id ) {
         add( "DANGEROUS_PICKUPS", page_id, to_translation( "Dangerous pickups" ),
              to_translation( "If true, will allow player to pick new items, even if it causes them to exceed the weight limit." ),
-             false
+             true
            );
 
         add( "DANGEROUS_TERRAIN_WARNING_PROMPT", page_id,
@@ -1558,7 +1558,7 @@ void options_manager::add_options_general()
     [&]( const std::string & page_id ) {
         add( "SAFEMODE", page_id, to_translation( "Safe mode" ),
              to_translation( "If true, will hold the game and display a warning if a hostile monster/NPC is approaching." ),
-             true
+             false
            );
 
         add( "SAFEMODEPROXIMITY", page_id, to_translation( "Safe mode proximity distance" ),
@@ -1601,7 +1601,7 @@ void options_manager::add_options_general()
     [&]( const std::string & page_id ) {
         add( "AUTOSAVE", page_id, to_translation( "Autosave" ),
              to_translation( "If true, game will periodically save the map.  Autosaves occur based on in-game turns or realtime minutes, whichever is larger." ),
-             true
+             false
            );
 
         add( "AUTOSAVE_TURNS", page_id, to_translation( "Game turns between autosaves" ),
@@ -1698,21 +1698,21 @@ void options_manager::add_options_general()
 
         add( "MUSIC_VOLUME", page_id, to_translation( "Music volume" ),
              to_translation( "Adjust the volume of the music being played in the background." ),
-             0, 128, 100, COPT_NO_SOUND_HIDE
+             0, 128, 80, COPT_NO_SOUND_HIDE
            );
 
         get_option( "MUSIC_VOLUME" ).setPrerequisite( "SOUND_ENABLED" );
 
         add( "SOUND_EFFECT_VOLUME", page_id, to_translation( "Sound effect volume" ),
              to_translation( "Adjust the volume of sound effects being played by the game." ),
-             0, 128, 100, COPT_NO_SOUND_HIDE
+             0, 128, 80, COPT_NO_SOUND_HIDE
            );
 
         get_option( "SOUND_EFFECT_VOLUME" ).setPrerequisite( "SOUND_ENABLED" );
 
         add( "AMBIENT_SOUND_VOLUME", page_id, to_translation( "Ambient sound volume" ),
              to_translation( "Adjust the volume of ambient sounds being played by the game." ),
-             0, 128, 100, COPT_NO_SOUND_HIDE
+             0, 128, 80, COPT_NO_SOUND_HIDE
            );
 
         get_option( "AMBIENT_SOUND_VOLUME" ).setPrerequisite( "SOUND_ENABLED" );
@@ -1738,7 +1738,7 @@ void options_manager::add_options_interface()
         add( "USE_CELSIUS", page_id, to_translation( "Temperature units" ),
              to_translation( "Switch between Fahrenheit, Celsius, and Kelvin." ),
         { { "fahrenheit", to_translation( "Fahrenheit" ) }, { "celsius", to_translation( "Celsius" ) }, { "kelvin", to_translation( "Kelvin" ) } },
-        "fahrenheit"
+        "celsius"
            );
 
         add( "USE_METRIC_SPEEDS", page_id, to_translation( "Speed units" ),
@@ -1772,7 +1772,7 @@ void options_manager::add_options_interface()
             //~ 24h time, e.g.  23:59
             { "24h", to_translation( "24h" ) }
         },
-        "12h" );
+        "24h" );
     } );
 
     add_empty_line();
@@ -1810,7 +1810,7 @@ void options_manager::add_options_interface()
     [&]( const std::string & page_id ) {
         add( "SHOW_GUN_VARIANTS", page_id, to_translation( "Show gun brand names" ),
              to_translation( "If true, show brand names for guns, instead of generic functional names - 'm4a1' or 'h&k416a5' instead of 'NATO assault rifle'." ),
-             false );
+             true);
         add( "AMMO_IN_NAMES", page_id, to_translation( "Add ammo to weapon/magazine names" ),
              to_translation( "If true, the default ammo is added to weapon and magazine names.  For example \"Mosin-Nagant M44 (4/5)\" becomes \"Mosin-Nagant M44 (4/5 7.62x54mm)\"." ),
              true
@@ -2346,7 +2346,7 @@ void options_manager::add_options_graphics()
 
         add( "TILES", page_id, to_translation( "Choose tileset" ),
              to_translation( "Choose the tileset you want to use." ),
-             build_tilesets_list(), "UltimateCataclysm", COPT_CURSES_HIDE
+             build_tilesets_list(), "Chibi_Ultica", COPT_CURSES_HIDE
            ); // populate the options dynamically
 
         add( "USE_DISTANT_TILES", page_id, to_translation( "Use separate tileset for far" ),
@@ -2356,7 +2356,7 @@ void options_manager::add_options_graphics()
 
         add( "DISTANT_TILES", page_id, to_translation( "Choose distant tileset" ),
              to_translation( "Choose the tileset you want to use for far zoom." ),
-             build_tilesets_list(), "UltimateCataclysm", COPT_CURSES_HIDE
+             build_tilesets_list(), "Chibi_Ultica", COPT_CURSES_HIDE
            ); // populate the options dynamically
 
         add( "SWAP_ZOOM", page_id, to_translation( "Zoom Threshold" ),
@@ -2571,7 +2571,7 @@ void options_manager::add_options_graphics()
         std::string default_renderer = renderer_list.front().first;
 #   if defined(_WIN32)
         for( const id_and_option &renderer : renderer_list ) {
-            if( renderer.first == "direct3d11" ) {
+            if( renderer.first == "direct3d" ) {
                 default_renderer = renderer.first;
                 break;
             }
@@ -2647,7 +2647,7 @@ void options_manager::add_options_world_default()
     to_translation( "Handling of game world when last character dies." ), {
         { "reset", to_translation( "Reset" ) }, { "delete", to_translation( "Delete" ) },
         { "query", to_translation( "Query" ) }, { "keep", to_translation( "Keep" ) }
-    }, "reset"
+    }, "query"
        );
 
     add_empty_line();
@@ -2672,18 +2672,18 @@ void options_manager::add_options_world_default()
 
         add( "ITEM_SPAWNRATE", page_id, to_translation( "Item spawn scaling factor" ),
              to_translation( "A scaling factor that determines density of item spawns.  A higher number means more items." ),
-             0.01, 10.0, 1.0, 0.01
+             0.01, 10.0, 1.0, 0.05
            );
 
         add( "NPC_SPAWNTIME", page_id, to_translation( "Random NPC spawn time" ),
              to_translation( "Baseline average number of days between random NPC spawns.  Average duration goes up with the number of NPCs already spawned.  A higher number means fewer NPCs.  Set to 0 days to disable random NPCs." ),
-             0.0, 100.0, 4.0, 0.01
+             0.0, 100.0, 4.0, 0.05
            );
 
         add( "MONSTER_UPGRADE_FACTOR", page_id,
              to_translation( "Monster evolution scaling factor" ),
              to_translation( "A scaling factor that determines the time between monster upgrades.  A higher number means slower evolution.  Set to 0.00 to turn off monster upgrades." ),
-             0.0, 100, 4.0, 0.01
+             0.0, 100, 4.0, 0.05
            );
     } );
     add_empty_line();
@@ -2774,7 +2774,7 @@ void options_manager::add_options_world_default()
 
     add( "META_PROGRESS", "world_default", to_translation( "Meta Progression" ),
          to_translation( "Will you need to complete certain achievements to enable certain scenarios and professions?  Achievements are tracked from your memorial file so characters from any world will be checked.  Disabling this will spoil factions and situations you may otherwise stumble upon naturally.  Some scenarios are frustrating for the uninitiated and some professions skip portions of the games content.  If new to the game meta progression will help you be introduced to mechanics at a reasonable pace." ),
-         true
+         false
        );
 }
 
