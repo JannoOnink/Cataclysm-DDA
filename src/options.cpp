@@ -1810,7 +1810,7 @@ void options_manager::add_options_interface()
     [&]( const std::string & page_id ) {
         add( "SHOW_GUN_VARIANTS", page_id, to_translation( "Show gun brand names" ),
              to_translation( "If true, show brand names for guns, instead of generic functional names - 'm4a1' or 'h&k416a5' instead of 'NATO assault rifle'." ),
-             true);
+             true );
         add( "AMMO_IN_NAMES", page_id, to_translation( "Add ammo to weapon/magazine names" ),
              to_translation( "If true, the default ammo is added to weapon and magazine names.  For example \"Mosin-Nagant M44 (4/5)\" becomes \"Mosin-Nagant M44 (4/5 7.62x54mm)\"." ),
              true
@@ -2821,6 +2821,13 @@ void options_manager::add_options_debug()
     add( "DEBUG_DIFFICULTIES", "debug", to_translation( "Show values for character creation" ),
          to_translation( "In character creation will show the underlying value that is used to determine difficulty." ),
          false
+       );
+
+    add_empty_line();
+
+    add( "SKILL_RUST_STRENGTH", "debug", to_translation( "Skill rust strength" ),
+         to_translation( "Scales rate of decay and impact cap of skill rust.  At 0.5 skill rust is halved, at 2.0 its strength is doubled, 0.0 disables skill rust." ),
+         0.0, 10.0, 0.0, 0.05
        );
 
     add_empty_line();

@@ -973,7 +973,7 @@
     "description": "You have an exceptional memory, and find it easy to remember things.  Your skills will erode slightly slower than usual.",
     "types": [ "MEMORY" ],
     "skill_rust_multiplier": 0.66,
-    "starting_trait": true,
+    "starting_trait": false,
     "valid": false,
     "cancels": [ "FORGETFUL" ]
   },
@@ -1731,7 +1731,7 @@
     "types": [ "MEMORY" ],
     "social_modifiers": { "lie": -5 },
     "skill_rust_multiplier": 1.33,
-    "starting_trait": true,
+    "starting_trait": false,
     "category": [ "BEAST", "MEDICAL", "CHIMERA", "MOUSE", "INSECT", "RABBIT" ]
   },
   {
