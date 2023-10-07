@@ -26,7 +26,8 @@
     "id": "EOC_PORTAL_STORM_WARN_OR_CAUSE_RECURRING",
     "recurrence": [ { "global_val": "ps_min_woc", "default": "5 days" }, { "global_val": "ps_max_woc", "default": "18 days" } ],
     "global": true,
-    "effect": { "run_eocs": "EOC_CAUSE_EARLY_PORTAL_STORM" }
+    "effect": [],
+    "//": { "run_eocs": "EOC_CAUSE_EARLY_PORTAL_STORM" }
   },
   {
     "type": "effect_on_condition",
@@ -132,7 +133,8 @@
         ]
       }
     },
-    "effect": [
+    "effect": [],
+    "///": [
       { "u_location_variable": { "global_val": "portal_storm_center" }, "min_radius": 30, "max_radius": 75 },
       { "math": [ "cause_early_portal_storm", "=", "1" ] },
       "next_weather",
@@ -179,7 +181,8 @@
     "global": true,
     "//": "This sets up all the variables for the start of a portal storm.",
     "condition": { "not": { "or": [ { "is_weather": "portal_storm" }, { "math": [ "cause_portal_storm", "==", "1" ] } ] } },
-    "effect": [
+    "effect": [],
+    "///": [
       { "math": [ "cause_early_portal_storm", "=", "0" ] },
       { "math": [ "cause_portal_storm", "=", "1" ] },
       "next_weather",
