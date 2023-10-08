@@ -7187,6 +7187,14 @@
     "components": [ [ [ "plank_short", 2 ] ], [ [ "nuts_bolts", 12 ] ], [ [ "cotton_patchwork", 30 ] ], [ [ "splinter", 22 ] ] ]
   },
   {
+    "result": "deck_chair_nail",
+    "type": "uncraft",
+    "activity_level": "LIGHT_EXERCISE",
+    "time": "30 m",
+    "qualities": [ { "id": "PRY", "level": 1 }, { "id": "SAW_W", "level": 2 } ],
+    "components": [ [ [ "plank_short", 2 ] ], [ [ "nail", 12 ] ], [ [ "cotton_patchwork", 30 ] ], [ [ "splinter", 22 ] ] ]
+  },
+  {
     "result": "chair_wood",
     "type": "uncraft",
     "activity_level": "MODERATE_EXERCISE",
@@ -7199,7 +7207,7 @@
     "type": "uncraft",
     "activity_level": "MODERATE_EXERCISE",
     "time": "30 m",
-    "qualities": [ { "id": "PRY", "level": 1 }, { "id": "SAW_W", "level": 2 }, { "id": "SCREW", "level": 1 } ],
+    "qualities": [ { "id": "PRY", "level": 1 }, { "id": "SAW_W", "level": 2 } ],
     "components": [ [ [ "wooden_post_short", 2 ] ], [ [ "wood_block", 24 ] ], [ [ "nail", 30 ] ], [ [ "splinter", 10 ] ] ]
   },
   {
@@ -7207,7 +7215,7 @@
     "type": "uncraft",
     "activity_level": "MODERATE_EXERCISE",
     "time": "30 m",
-    "qualities": [ { "id": "PRY", "level": 1 }, { "id": "SAW_W", "level": 2 }, { "id": "SCREW", "level": 1 } ],
+    "qualities": [ { "id": "PRY", "level": 1 }, { "id": "SAW_W", "level": 2 } ],
     "components": [ [ [ "wooden_post_short", 2 ] ], [ [ "wood_block", 24 ] ], [ [ "splinter", 10 ] ] ]
   },
   {
@@ -7231,6 +7239,22 @@
     "time": "30 m",
     "qualities": [ { "id": "PRY", "level": 1 }, { "id": "SAW_W", "level": 2 }, { "id": "SCREW", "level": 1 } ],
     "components": [ [ [ "wood_block", 12 ] ], [ [ "nuts_bolts", 10 ] ], [ [ "splinter", 4 ] ] ]
+  },
+  {
+    "result": "stool_wood_nail",
+    "type": "uncraft",
+    "activity_level": "MODERATE_EXERCISE",
+    "time": "30 m",
+    "qualities": [ { "id": "PRY", "level": 1 }, { "id": "SAW_W", "level": 2 } ],
+    "components": [ [ [ "wood_block", 12 ] ], [ [ "nail", 10 ] ], [ [ "splinter", 4 ] ] ]
+  },
+  {
+    "result": "stool_wood_join",
+    "type": "uncraft",
+    "activity_level": "MODERATE_EXERCISE",
+    "time": "30 m",
+    "qualities": [ { "id": "PRY", "level": 1 }, { "id": "SAW_W", "level": 2 } ],
+    "components": [ [ [ "wood_block", 12 ] ], [ [ "splinter", 4 ] ] ]
   },
   {
     "result": "stool_log",

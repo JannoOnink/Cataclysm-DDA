@@ -137,6 +137,7 @@
     "id": "f_chair_nail",
     "name": "wooden chair",
     "symbol": "#",
+    "looks_like": "f_chair",
     "description": "A simple wooden chair with four legs, a seat, and a back.  Constructed using nails.  It's nice to rest your feet for once, and if coupled with a suitable table, you could eat a meal properly and almost pretend that things were normal again.",
     "color": "brown",
     "move_cost_mod": 1,
@@ -164,6 +165,7 @@
     "id": "f_chair_join",
     "name": "wooden chair",
     "symbol": "#",
+    "looks_like": "f_chair",
     "description": "A simple wooden chair with four legs, a seat, and a back.  Constructed without metal fasteners.  It's nice to rest your feet for once, and if coupled with a suitable table, you could eat a meal properly and almost pretend that things were normal again.",
     "color": "brown",
     "move_cost_mod": 1,
@@ -179,10 +181,7 @@
       "str_max": 25,
       "sound": "smash!",
       "sound_fail": "whump.",
-      "items": [
-        { "item": "wooden_post_short", "count": 1 },
-        { "item": "splinter", "count": [ 1, 10 ] }
-      ]
+      "items": [ { "item": "wooden_post_short", "count": 1 }, { "item": "splinter", "count": [ 1, 10 ] } ]
     }
   },
   {
@@ -243,6 +242,54 @@
       "sound": "smash!",
       "sound_fail": "whump.",
       "items": [ { "item": "nuts_bolts", "charges": [ 1, 5 ] }, { "item": "splinter", "count": [ 3, 10 ] } ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_stool_nail",
+    "name": "wooden stool",
+    "symbol": "#",
+    "looks_like": "f_chair",
+    "description": "A simple stool with four legs and a seat.  Constructed using nails.  While it's a touch more maneuverable to sit on, the lack of back support means it's significantly less comfortable than a normal chair.",
+    "color": "brown",
+    "move_cost_mod": 1,
+    "coverage": 30,
+    "comfort": 1,
+    "bonus_fire_warmth_feet": 1000,
+    "required_str": 3,
+    "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "ORGANIC", "MOUNTABLE", "CAN_SIT", "EASY_DECONSTRUCT", "ALIGN_WORKBENCH" ],
+    "deconstruct": { "items": [ { "item": "stool_wood_nail", "count": 1 } ] },
+    "max_volume": "875 L",
+    "bash": {
+      "str_min": 6,
+      "str_max": 20,
+      "sound": "smash!",
+      "sound_fail": "whump.",
+      "items": [ { "item": "nail", "charges": [ 1, 5 ] }, { "item": "splinter", "count": [ 3, 10 ] } ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_stool_join",
+    "name": "wooden stool",
+    "symbol": "#",
+    "looks_like": "f_chair",
+    "description": "A simple stool with four legs and a seat.  Constructed without metal fasteners.  While it's a touch more maneuverable to sit on, the lack of back support means it's significantly less comfortable than a normal chair.",
+    "color": "brown",
+    "move_cost_mod": 1,
+    "coverage": 30,
+    "comfort": 1,
+    "bonus_fire_warmth_feet": 1000,
+    "required_str": 3,
+    "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "ORGANIC", "MOUNTABLE", "CAN_SIT", "EASY_DECONSTRUCT", "ALIGN_WORKBENCH" ],
+    "deconstruct": { "items": [ { "item": "stool_wood_join", "count": 1 } ] },
+    "max_volume": "875 L",
+    "bash": {
+      "str_min": 6,
+      "str_max": 20,
+      "sound": "smash!",
+      "sound_fail": "whump.",
+      "items": [ { "item": "splinter", "count": [ 3, 10 ] } ]
     }
   },
   {
@@ -328,6 +375,37 @@
       "items": [
         { "item": "splinter", "count": [ 2, 10 ] },
         { "item": "nuts_bolts", "charges": [ 1, 6 ] },
+        { "item": "cotton_patchwork", "count": [ 5, 15 ] }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_deckchair_nail",
+    "name": "deck chair",
+    "symbol": "#",
+    "looks_like": "f_chair",
+    "description": "A folding deck chair with fabric sheets mounted to a wooden frame.  Constructed using nails.  While it's built to handle outdoor conditions and is an improvement over the ground, it's not particularly comfortable.",
+    "color": "brown",
+    "move_cost_mod": 1,
+    "coverage": 30,
+    "comfort": 1,
+    "floor_bedding_warmth": -1000,
+    "bonus_fire_warmth_feet": 1000,
+    "required_str": 5,
+    "deployed_item": "deck_chair_nail",
+    "examine_action": "deployed_furniture",
+    "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "ORGANIC", "SHORT", "EASY_DECONSTRUCT", "CAN_SIT" ],
+    "max_volume": "750 L",
+    "deconstruct": { "items": [ { "item": "deck_chair_nail", "count": 1 } ] },
+    "bash": {
+      "str_min": 5,
+      "str_max": 25,
+      "sound": "smash!",
+      "sound_fail": "whump.",
+      "items": [
+        { "item": "splinter", "count": [ 2, 10 ] },
+        { "item": "nail", "charges": [ 1, 6 ] },
         { "item": "cotton_patchwork", "count": [ 5, 15 ] }
       ]
     }

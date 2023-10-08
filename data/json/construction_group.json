@@ -806,6 +806,26 @@
   },
   {
     "type": "construction_group",
+    "id": "build_stool_nail",
+    "name": "Place a wooden stool made with nails"
+  },
+  {
+    "type": "construction_group",
+    "id": "build_stool_join",
+    "name": "Place a joined wooden stool"
+  },
+  {
+    "type": "construction_group",
+    "id": "build_desk_chair",
+    "name": "Place a desk chair"
+  },
+  {
+    "type": "construction_group",
+    "id": "build_desk_chair_nail",
+    "name": "Place a desk chair made with nails"
+  },
+  {
+    "type": "construction_group",
     "id": "build_straight_small_railroad_track",
     "name": "Build Straight Small Railroad Track"
   },

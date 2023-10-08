@@ -5068,7 +5068,15 @@
     "name": "chairs",
     "description": "Recipes related to constructing chairs.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "deck_chair", "chair_wood", "chair_wood_nail", "chair_wood_join", "chair_wood_black", "chair_wood_white" ],
+    "nested_category_data": [
+      "deck_chair",
+      "deck_chair_nail",
+      "chair_wood",
+      "chair_wood_nail",
+      "chair_wood_join",
+      "chair_wood_black",
+      "chair_wood_white"
+    ],
     "difficulty": 3
   },
   {
@@ -5080,7 +5088,7 @@
     "name": "stools",
     "description": "Recipes related to constructing stools.",
     "skill_used": "fabrication",
-    "nested_category_data": [ "stool_wood", "stool_log" ],
+    "nested_category_data": [ "stool_wood", "stool_wood_nail", "stool_wood_join", "stool_log" ],
     "difficulty": 3
   },
   {

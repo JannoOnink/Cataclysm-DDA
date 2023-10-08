@@ -127,6 +127,23 @@
     "flags": [ "FRAGILE_MELEE" ]
   },
   {
+    "id": "deck_chair_nail",
+    "type": "TOOL",
+    "name": { "str": "deck chair (nails)" },
+    "description": "Folded deck chair, deploy to sit down.  Constructed using nails.",
+    "weight": "6 kg",
+    "volume": "20 L",
+    "longest_side": "120 cm",
+    "price": 7000,
+    "price_postapoc": 100,
+    "to_hit": -4,
+    "material": [ { "type": "wood", "portion": 90 }, { "type": "cotton", "portion": 10 } ],
+    "symbol": "#",
+    "color": "brown",
+    "use_action": { "type": "deploy_furn", "furn_type": "f_deckchair_nail" },
+    "flags": [ "FRAGILE_MELEE" ]
+  },
+  {
     "id": "chair_folding",
     "type": "TOOL",
     "name": { "str": "folding chair" },

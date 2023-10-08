@@ -25,6 +25,26 @@
     ]
   },
   {
+    "result": "deck_chair_nail",
+    "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
+    "category": "CC_*",
+    "subcategory": "CSC_*_NESTED",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "time": "120 m",
+    "autolearn": true,
+    "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "SAW_W", "level": 2 }, { "id": "CUT", "level": 1 } ],
+    "proficiencies": [ { "proficiency": "prof_carpentry_basic" } ],
+    "byproducts": [ [ "splinter", 140 ] ],
+    "components": [
+      [ [ "2x4", 4 ] ],
+      [ [ "wooden_post_short", 6 ] ],
+      [ [ "cotton_patchwork", 35 ], [ "sheet_cotton", 5 ], [ "sheet_cotton_patchwork", 5 ], [ "sheet", 1 ] ],
+      [ [ "nail", 12 ] ]
+    ]
+  },
+  {
     "result": "chair_wood",
     "type": "recipe",
     "activity_level": "MODERATE_EXERCISE",
@@ -79,12 +99,7 @@
     "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "SAW_W", "level": 2 }, { "id": "CHISEL_WOOD", "level": 1 } ],
     "proficiencies": [ { "proficiency": "prof_carpentry_basic" } ],
     "byproducts": [ [ "splinter", 168 ] ],
-    "components": [
-      [ [ "wooden_post", 2 ] ],
-      [ [ "wooden_post_short", 4 ] ],
-      [ [ "plank_short", 2 ] ],
-      [ [ "wood_panel", 1 ] ]
-    ]
+    "components": [ [ [ "wooden_post", 2 ] ], [ [ "wooden_post_short", 4 ] ], [ [ "plank_short", 2 ] ], [ [ "wood_panel", 1 ] ] ]
   },
   {
     "result": "stool_wood",
@@ -100,6 +115,36 @@
     "proficiencies": [ { "proficiency": "prof_carpentry_basic" } ],
     "byproducts": [ [ "splinter", 155 ] ],
     "components": [ [ [ "wooden_post_short", 5 ] ], [ [ "wood_panel", 1 ] ], [ [ "nuts_bolts", 10 ] ] ]
+  },
+  {
+    "result": "stool_wood_nail",
+    "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
+    "category": "CC_*",
+    "subcategory": "CSC_*_NESTED",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "time": "75 m",
+    "autolearn": true,
+    "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "SAW_W", "level": 2 } ],
+    "proficiencies": [ { "proficiency": "prof_carpentry_basic" } ],
+    "byproducts": [ [ "splinter", 155 ] ],
+    "components": [ [ [ "wooden_post_short", 5 ] ], [ [ "wood_panel", 1 ] ], [ [ "nail", 10 ] ] ]
+  },
+  {
+    "result": "stool_wood_join",
+    "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
+    "category": "CC_*",
+    "subcategory": "CSC_*_NESTED",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "time": "120 m",
+    "autolearn": true,
+    "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "SAW_W", "level": 2 }, { "id": "CHISEL_WOOD", "level": 1 } ],
+    "proficiencies": [ { "proficiency": "prof_carpentry_basic" } ],
+    "byproducts": [ [ "splinter", 155 ] ],
+    "components": [ [ [ "wooden_post_short", 5 ] ], [ [ "wood_panel", 1 ] ] ]
   },
   {
     "result": "stool_log",
