@@ -12,6 +12,7 @@
     "material": [ "steel" ],
     "symbol": ";",
     "color": "dark_gray",
+    "qualities": [ [ "ANVIL", 3 ] ],
     "flags": [ "DURABLE_MELEE" ],
     "melee_damage": { "bash": 40 }
   },
@@ -28,6 +29,7 @@
     "material": [ "bronze" ],
     "symbol": ";",
     "color": "yellow",
+    "qualities": [ [ "ANVIL", 3 ] ],
     "flags": [ "DURABLE_MELEE" ],
     "melee_damage": { "bash": 35 }
   },
@@ -44,6 +46,7 @@
     "material": [ "steel" ],
     "symbol": ";",
     "color": "dark_gray",
+    "qualities": [ [ "ANVIL", 4 ] ],
     "flags": [ "DURABLE_MELEE" ],
     "melee_damage": { "bash": 40 }
   },
@@ -60,6 +63,7 @@
     "material": [ "steel" ],
     "symbol": ";",
     "color": "dark_gray",
+    "qualities": [ [ "ANVIL", 2 ] ],
     "flags": [ "DURABLE_MELEE" ],
     "melee_damage": { "bash": 40 }
   },
